@@ -3,7 +3,7 @@ extends layout
 block content
   form(action='/books/add',method='post')
     h1 Book Id: 
-    input(type='text',name='id')
+    input(type='text',name='id1',value='Id_Not_Given')
     br
     h1 Book Name: 
     input(type='text', name='name')
@@ -11,4 +11,4 @@ block content
     h1 Author Name: 
     input(type='text',name='author')
     br
-    input(type='submit', value= 'Add Book')  
+    input(type='submit', value= 'Submit')  

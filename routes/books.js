@@ -7,7 +7,7 @@ router.get('/search', function (req, res, next) {
 });
 router.post('/add',function(req,res,next){
   console.log(req.body);
-  res.status(200).json({message: ' Book saved successulg'});
+  res.status(200).json({message: req.body.id1});
 });
 router.get('/add', function(req,res,next){
   // console.log(req.body);
@@ -24,7 +24,9 @@ router.get('/add/:id/:name/:auth', function(req,res,next){
   console.info('Name:',name,'id: ',id,'auth: ',auth);
   res.status(200).json({Message:'Task completed'});
 });
-
+router.get('/test',function(req,res,next){
+  red.render('book');
+})
 
 router.get('/find/:id', function(req,res,next){
   const {id}=req.params;
